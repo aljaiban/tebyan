@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:hello_tebyan/screens/home3.dart';
 
 //تطبيق تبيان
 
-main() {
-  runApp(
-    MaterialApp(
+main() => runApp(HelloTebyanApp());
+
+class HelloTebyanApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "تطبيق مرحبا تبيان",
-      home: Center(
-        child: Text(
-          "مرحبا تبيان",
-          textDirection: TextDirection.rtl,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
-        ),
-      ),
-    ),
-  );
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              'مرحبا تبيان',
+              textDirection: TextDirection.rtl,
+              style: TextStyle(
+                  color: Colors.blue[900], fontWeight: FontWeight.bold),
+            ),
+            backgroundColor: Colors.deepOrangeAccent[100],
+            centerTitle: true,
+          ),
+          body: Home()),
+    );
+  }
 }
