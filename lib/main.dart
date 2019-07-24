@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_tebyan/screens/home.dart';
+import 'package:hello_tebyan/screens/home7.dart';
 
 //تطبيق تبيان
 
@@ -12,12 +12,14 @@ class HelloTebyanApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "تطبيق مرحبا تبيان",
       home: Scaffold( 
-          appBar: AppBar( leading: Text(Home().marhba()),
+          appBar: AppBar( 
             title: Text(
-              'مرحبا تبيان',
+              Home().marhba(),
               textDirection: TextDirection.rtl,
               style: TextStyle(
-                  color: Colors.blue[900], fontWeight: FontWeight.bold),
+                  color: Colors.blue[900], fontWeight: FontWeight.bold,
+                  fontFamily: 'Changa'),
+                  
             ),
             backgroundColor: Colors.deepOrangeAccent[100],
             centerTitle: true,
